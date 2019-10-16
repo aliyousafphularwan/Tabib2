@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_rectangle"
+        android:padding="10dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor's name"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:id="@+id/rv_dname"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor's type"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="9sp"
+            android:layout_below="@id/rv_dname"
+            android:id="@+id/rv_dtype"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor's degree"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="9sp"
+            android:layout_below="@id/rv_dtype"
+            android:id="@+id/rv_ddegree"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fee"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="9sp"
+            android:layout_below="@id/rv_ddegree"
+            android:id="@+id/rv_dfee"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500-1000"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="9sp"
+            android:layout_below="@id/rv_dfee"
+            android:id="@+id/rv_dfeedigits"/>
+
+        <ImageView
+            android:id="@+id/rv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_ddegree"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/rv_dfeedigits"
+            android:src="@drawable/ic_star_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_toRightOf="@id/rv_star"
+            android:layout_below="@id/rv_dfee"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_black_24dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_bg"
+        android:padding="20dp"
+        android:id="@+id/rv_foto"/>
+
+
+
+</RelativeLayout>

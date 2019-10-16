@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/login"
+        android:layout_marginTop="-270dp"
+        android:layout_marginLeft="-50dp"/>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/badge"
+         android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_user"
+        android:inputType="textEmailAddress"
+        android:hint="Enter email or password"
+        android:background="@drawable/check_buttons"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="50dp"/>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_passin"
+        android:inputType="textPassword"
+        android:hint="Enter password"
+        android:background="@drawable/check_buttons"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="50dp"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forget password?"
+        android:id="@+id/forget_pass"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:textSize="14dp"
+        android:paddingVertical="15dp"
+        android:fontFamily="@font/poppins_light"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="50dp"/>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:fontFamily="@font/gilroy_regular"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/button_bg"
+        android:textColor="#ffffff"
+        android:id="@+id/btnLogin"/>
+
+</LinearLayout>

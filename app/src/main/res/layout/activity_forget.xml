@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ForgetActivity"
+    android:background="#eeeeee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@drawable/bottom_stroke">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_black_24dp_2"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/forget_password"
+            android:id="@+id/forget_icon"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Please provide the required information to proceed"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:paddingVertical="15dp"
+            android:id="@+id/forget_text"
+            android:layout_below="@id/forget_icon"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/forget_text"
+            android:background="@drawable/rounded_rectangle"
+            android:layout_marginHorizontal="10dp"
+            android:paddingVertical="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:layout_marginHorizontal="35dp"
+                android:paddingVertical="15dp"
+                android:inputType="text"
+                android:background="@drawable/forget_bg"
+                android:paddingHorizontal="25dp"
+                android:id="@+id/forget_email"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:background="@drawable/button_bg"
+                android:textColor="#ffffff"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="35dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

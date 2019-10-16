@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        android:layout_marginTop="-120dp"
+        android:id="@+id/img_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/img_header"
+        android:id="@+id/login_buttons">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have an account"
+            android:id="@+id/login_activity"
+            android:fontFamily="@font/poppins_light"
+            android:background="@drawable/check_buttons"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:paddingVertical="15dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/check_buttons"
+            android:id="@+id/login_facebook"
+            android:layout_marginHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:src="@drawable/facebook_login"
+            android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/check_buttons"
+                android:id="@+id/login_google"
+                android:layout_marginHorizontal="40dp"
+                android:paddingVertical="10dp"
+                android:src="@drawable/google_login"
+                android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_buttons"
+        android:paddingVertical="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dont have account"
+            android:fontFamily="@font/poppins_light"
+            android:id="@+id/btn_left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register here"
+            android:layout_toRightOf="@id/btn_left"
+            android:fontFamily="@font/poppins_light"
+            android:layout_marginLeft="8dp"
+            android:textStyle="bold"
+            android:id="@+id/register_activity"
+            android:textColor="@color/colorPrimaryDark"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
