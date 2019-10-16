@@ -29,7 +29,7 @@ import java.util.HashMap;
 public class DashboardActivity extends AppCompatActivity {
 
     public static FragmentManager fragmentManager;
-    private ImageView btnSearch, btnHome, doc;
+    private ImageView btnSearch, btnHome;
     UserSession session;
 
     @Override
@@ -39,8 +39,6 @@ public class DashboardActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         String id = i.getStringExtra("id");
-
-        doc = findViewById(R.id.nurse);
 
         //Toast.makeText(this, "your loggin id is: " + id, Toast.LENGTH_SHORT).show();
 

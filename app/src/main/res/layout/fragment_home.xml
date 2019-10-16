@@ -56,7 +56,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/nurse"
-                    android:id="@+id/nurse"
+                    android:id="@+id/doc"
                     android:background="@drawable/shadow"
                     android:padding="20dp"/>
 

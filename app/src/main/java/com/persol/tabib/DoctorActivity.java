@@ -17,16 +17,16 @@ public class DoctorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
 
-        // getSupportActionBar().hide();
+        name = findViewById(R.id.tvName);
+        email = findViewById(R.id.tvEmail);
 
-//        Intent intent = getIntent();
-//        String gname = intent.getStringExtra("name");
-//        String gemail = intent.getStringExtra("email");
-//
-//        name = findViewById(R.id.tvName);
-//        name.setText(gname);
-//        email=findViewById(R.id.tvEmail);
-//        email.setText(gemail);
+        Intent intent = getIntent();
+        String gname = intent.getStringExtra("name");
+        String specialty = intent.getStringExtra("specialty");
+
+        name.setText(gname);
+        email.setText(specialty);
+
 
     }
 }
