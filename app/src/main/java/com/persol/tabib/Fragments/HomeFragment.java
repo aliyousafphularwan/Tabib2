@@ -61,108 +61,17 @@ public class HomeFragment extends Fragment {
         doc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                StringRequest request = new StringRequest(Request.Method.GET, Constants.DOC, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-
-                        //Toast.makeText(getActivity(), "Response: " + response, Toast.LENGTH_SHORT).show();
-
-                        try {
-                            JSONObject res = new JSONObject(response);
-                            String success = res.getString("success");
-
-                            //Toast.makeText(getActivity(), "success: " + success, Toast.LENGTH_SHORT).show();
-                            if (success.equals("1")){
-//                                Toast.makeText(getActivity(), "true", Toast.LENGTH_SHORT).show();
-                                JSONArray arr = res.getJSONArray("data");
-                                //Toast.makeText(getActivity(), "Data: " + arr, Toast.LENGTH_SHORT).show();
-                                for (int i=0;i<arr.length();i++){
-                                    JSONObject obj = arr.getJSONObject(i);
-                                    //Toast.makeText(getActivity(), "Data: " + obj, Toast.LENGTH_SHORT).show();
-                                    String name = obj.getString("name");
-                                    String specialty = obj.getString("specialty");
-
-                                    Intent intent = new Intent(getActivity(), DoctorActivity.class);
-                                    intent.putExtra("name", name);
-                                    intent.putExtra("specialty", specialty);
-                                    startActivity(intent);
-                                }
-
-                            }else{
-                                Toast.makeText(getActivity(), "false", Toast.LENGTH_SHORT).show();
-
-                            }
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getActivity(), "Response: " + error, Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-                RequestQueue queue = Volley.newRequestQueue(getActivity());
-                queue.add(request);
-
+                startActivity(new Intent(getActivity(), DoctorActivity.class));
             }
         });
 
         med.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                StringRequest request = new StringRequest(Request.Method.GET, Constants.MED_SRCH, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-
-                        //Toast.makeText(getActivity(), "Response: " + response, Toast.LENGTH_SHORT).show();
-
-                        try {
-                            JSONObject res = new JSONObject(response);
-                            String success = res.getString("success");
-
-                            //Toast.makeText(getActivity(), "success: " + success, Toast.LENGTH_SHORT).show();
-                            if (success.equals("1")){
-//                                Toast.makeText(getActivity(), "true", Toast.LENGTH_SHORT).show();
-                                JSONArray arr = res.getJSONArray("data");
-                                //Toast.makeText(getActivity(), "Data: " + arr, Toast.LENGTH_SHORT).show();
-                                for (int i=0;i<arr.length();i++){
-                                    JSONObject obj = arr.getJSONObject(i);
-                                    //Toast.makeText(getActivity(), "Data: " + obj, Toast.LENGTH_SHORT).show();
-                                    String name = obj.getString("name");
-
-                                    Intent intent = new Intent(getActivity(), MedicineActivity.class);
-                                    intent.putExtra("name", name);
-                                    startActivity(intent);
-                                }
-
-                            }else{
-                                Toast.makeText(getActivity(), "false", Toast.LENGTH_SHORT).show();
-
-                            }
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getActivity(), "Response: " + error, Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-                RequestQueue queue = Volley.newRequestQueue(getActivity());
-                queue.add(request);
-
+                startActivity(new Intent(getActivity(), MedicineActivity.class));
             }
         });
+
 
         return v;
     }

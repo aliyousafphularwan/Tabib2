@@ -2,35 +2,18 @@ package com.persol.tabib.Misc;
 
 public class DoctorModel {
 
-    String dname, dsepc, ddesig;
+    String dname, degree;
 
-    public DoctorModel(String dname, String dsepc, String ddesig) {
+    public DoctorModel(String dname, String degree) {
         this.dname = dname;
-        this.dsepc = dsepc;
-        this.ddesig = ddesig;
+        this.degree = degree;
     }
 
     public String getDname() {
         return dname;
     }
 
-    public void setDname(String dname) {
-        this.dname = dname;
-    }
-
-    public String getDsepc() {
-        return dsepc;
-    }
-
-    public void setDsepc(String dsepc) {
-        this.dsepc = dsepc;
-    }
-
-    public String getDdesig() {
-        return ddesig;
-    }
-
-    public void setDdesig(String ddesig) {
-        this.ddesig = ddesig;
+    public String getDegree() {
+        return degree;
     }
 }

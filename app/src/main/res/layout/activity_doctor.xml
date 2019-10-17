@@ -6,19 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".DoctorActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvName"
-        android:text="Hello"
-        android:layout_centerInParent="true"
-        android:layout_above="@id/tvEmail"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvEmail"
-        android:layout_centerInParent="true"
-        android:text="World!"/>
-
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/docList"
+        android:padding="10dp"/>
 </RelativeLayout>
